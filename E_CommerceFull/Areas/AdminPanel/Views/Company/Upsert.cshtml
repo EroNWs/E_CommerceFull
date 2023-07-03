@@ -1,0 +1,96 @@
+﻿@model Company
+
+<div class="card shadow border-0 mt-4 mb-5">
+	<div class="card-header bg-secondary bg-gradient ml-0 py-3">
+		<div class="row">
+			<div class="col-12 text-center">
+				<h2 class="text-white py-2">@(Model.Id != 0 ? "Update" : "Create") Company</h2>
+			</div>
+		</div>
+	</div>
+	<div class="card-body p-4">
+		<form method="post" class="row" enctype="multipart/form-data">
+			<input asp-for="Id" hidden />
+
+			<div class="row">
+				<div class=col-12>
+					<div class="border p-3">
+						<div class="form-floating py-2 col-12">
+							<input asp-for="CompanyName" class="form-control border-0 shadow" />
+							<label asp-for="CompanyName" class="ms-2">Company Name</label>
+							<span asp-validation-for="CompanyName" class="text-danger"></span>
+						</div>
+						<div class="form-floating py-2 col-12 mt-4">
+							<input asp-for="StreetAddress" class="form-control border-0 shadow" />
+							<label asp-for="StreetAddress" class="ms-2 text-muted">Street Address</label>
+							<span asp-validation-for="StreetAddress" class="text-danger"></span>
+
+						</div>
+						<div class="form-floating py-2 col-12 mt-4">
+							<input asp-for="City" class="form-control border-0 shadow" />
+							<label asp-for="City" class="ms-2">City</label>
+							<span asp-validation-for="City" class="text-danger"></span>
+
+						</div>
+						<div class="form-floating py-2 col-12 mt-4">
+							<input asp-for="State" class="form-control border-0 shadow" />
+							<label asp-for="State" class="ms-2">State</label>
+							<span asp-validation-for="State" class="text-danger"></span>
+
+						</div>
+						<div class="form-floating py-2 col-12 mt-4">
+							<input asp-for="PhoneNumber" class="form-control border-0 shadow" />
+							<label asp-for="PhoneNumber" class="ms-2">Phone Number</label>
+							<span asp-validation-for="PhoneNumber" class="text-danger"></span>
+
+						</div>
+						
+						<div class="row mt-4">
+							<div class="col-6">
+								@if (Model.Id != 0)
+								{
+
+									<button type="submit" class="btn btn-primary form-control">Update A Company</button>
+
+								}
+								else
+								{
+
+									<button type="submit" class="btn btn-primary form-control">Create A New Company</button>
+
+								}
+
+							</div>
+							<div class="col-6">
+								<a asp-controller="Company" asp-action="Index" class="btn btn-outline-secondary form-control">Back to Company List</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+
+		</form>
+	</div>
+
+</div>
+<br />
+
+@section Scripts{
+	<script>
+		tinymce.init({
+			selector: 'textarea',
+			plugins: 'anchor autolink charmap codesample emoticons lists table visualblocks wordcount',
+			toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough |  addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent',
+			tinycomments_mode: 'embedded',
+			tinycomments_author: 'Author name',
+			mergetags_list: [
+				{ value: 'First.Name', title: 'First Name' },
+				{ value: 'Email', title: 'Email' },
+			]
+		});
+	</script>
+
+
+
+}
