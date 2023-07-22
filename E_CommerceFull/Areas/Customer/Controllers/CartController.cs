@@ -27,7 +27,7 @@ namespace E_CommerceFull.Areas.Customer.Controllers
 
 		}
 
-
+		[Route("cart")]
 		public IActionResult Index()
 		{
 			var claimsIdentity = (ClaimsIdentity)User.Identity;

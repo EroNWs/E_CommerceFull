@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace E_CommerceFull.Areas.AdminPanel.Controllers
 {
-    [Area("AdminPanel")]
+    [Area("AdminPanel")]  
     [Authorize(Roles = StaticDetails_SD.Role_Admin)]
     public class CategoryController : Controller
     {

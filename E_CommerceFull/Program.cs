@@ -2,11 +2,11 @@ using E_Commerce.DataAccessLayer.Data;
 using E_Commerce.DataAccessLayer.Repository;
 using E_Commerce.DataAccessLayer.Repository.IRepository;
 using Microsoft.EntityFrameworkCore;
-using System.Configuration;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using E_Commerce.Utility;
 using Stripe;
+
 
 var builder = WebApplication.CreateBuilder(args);
 

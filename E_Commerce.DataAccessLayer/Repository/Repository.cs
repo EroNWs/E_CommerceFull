@@ -43,6 +43,7 @@ namespace E_Commerce.DataAccessLayer.Repository
 			}
 
 			query = query.Where(filter);
+
 			if (!string.IsNullOrEmpty(includeProperties))
 			{
 				foreach (var includeProp in includeProperties

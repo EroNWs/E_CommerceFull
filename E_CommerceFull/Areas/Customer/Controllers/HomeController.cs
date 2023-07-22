@@ -26,7 +26,11 @@ namespace E_CommerceFull.Areas.Customer.Controllers
             return View(productList);
         }
 
-        public IActionResult Details(int productId)
+
+
+        //Parametreyi aynı vererek oraya gitmesi sağlanıyor 
+	
+		public IActionResult Details(int productId)
         {
             ShoppingCart shoppingCart = new()
             {

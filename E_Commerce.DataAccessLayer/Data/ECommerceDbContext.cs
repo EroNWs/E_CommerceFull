@@ -5,8 +5,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace E_Commerce.DataAccessLayer.Data
 {
-    public class ECommerceDbContext:IdentityDbContext<IdentityUser>
-	{
+    public class ECommerceDbContext: Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityDbContext<Microsoft.AspNetCore.Identity.IdentityUser>
+    {
         public DbSet<Category> Categories { get; set; }
 
 		public DbSet<Product> Products { get; set; }
